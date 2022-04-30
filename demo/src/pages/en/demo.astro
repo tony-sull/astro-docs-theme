@@ -1,0 +1,25 @@
+---
+import { MainLayout } from '@astrojs/docs-theme'
+import * as CONFIG from '../../config.ts'
+import * as LANGUAGES from '../../languages.ts'
+
+const theme = {
+    site: CONFIG.SITE,
+    openGraph: CONFIG.OPEN_GRAPH,
+    knownLanguages: CONFIG.KNOWN_LANGUAGES,
+    sidebar: CONFIG.SIDEBAR,
+    langPathRegex: LANGUAGES.langPathRegex
+}
+
+const content = {
+    title: 'Demo',
+    description: 'Demo page',
+    astro: {
+        headers: []
+    }
+}
+---
+
+<MainLayout {...theme} {content}>
+    <h1>Testing</h1>
+</MainLayout>
